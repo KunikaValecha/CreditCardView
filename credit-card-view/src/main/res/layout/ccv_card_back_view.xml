@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvBack"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="22dp"
+    app:cardElevation="4dp"
+    tools:layout_height="180dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBackView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2D2D2D">
+
+        <View
+            android:id="@+id/strip1"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="30dp"
+            android:background="#1C1C1C"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/strip2"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ccv_card_strip"
+            app:layout_constraintEnd_toStartOf="@id/etCvv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/strip1" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etCvv"
+            android:layout_width="53dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="52dp"
+            android:background="@drawable/ccv_bg_edit_text_rounded_corner_white"
+            android:digits="0123456789"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textCursorDrawable="@null"
+            app:layout_constraintBottom_toBottomOf="@id/strip2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/strip2"
+            tools:hint="XXX" />
+
+        <View
+            android:id="@+id/outlineCvv"
+            android:layout_width="61dp"
+            android:layout_height="39dp"
+            android:background="@drawable/ccv_bg_rounded_corner_white"
+            app:layout_constraintBottom_toBottomOf="@id/etCvv"
+            app:layout_constraintEnd_toEndOf="@id/etCvv"
+            app:layout_constraintStart_toStartOf="@id/etCvv"
+            app:layout_constraintTop_toTopOf="@id/etCvv" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/back_tvBankName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginBottom="18dp"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_max="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_max="90dp"
+            app:textAllCaps="true"
+            tools:text="HDFC BANK" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCardTypeBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="18dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_max="40dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

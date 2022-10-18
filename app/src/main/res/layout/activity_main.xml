@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.github.creditcardview.MainActivity">
+
+    <com.github.credit_card_view.CreditCardView
+        android:id="@+id/creditCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:card_autoFocusCardNumber="true"
+        app:card_backGradientEnd="#626262"
+        app:card_backGradientStart="#2D2D2D"
+        app:card_backStrip2Color="#303030"
+        app:card_backStripColor="@color/black"
+        app:card_cardExpiryHeaderColor="#C4C4C4"
+        app:card_cardExpiryHintColor="#4DFFFFFF"
+        app:card_cardExpiryTextColor="@color/white"
+        app:card_cardNameHeaderColor="#C4C4C4"
+        app:card_cardNameHintColor="#4DFFFFFF"
+        app:card_cardNameTextColor="@color/white"
+        app:card_cardNumberHintColor="#656565"
+        app:card_cardNumberTextColor="@color/white"
+        app:card_cvvBackgroundColor="@color/white"
+        app:card_cvvHintColor="#4D000000"
+        app:card_cvvTextColor="#000000"
+        app:card_frontGradientEnd="#313131"
+        app:card_frontGradientStart="#1F1F1F"
+        app:card_isBackSideEditable="true"
+        app:card_isFrontSideEditable="true"
+        app:card_outline_base_color="#EBB46A"
+        app:card_outline_error_color="#EB6A6E"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_height="180dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

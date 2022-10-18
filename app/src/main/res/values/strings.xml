@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CreditCardView</string>
+    <string name="dummy_bank_name">ICICI BANK</string>
+</resources>

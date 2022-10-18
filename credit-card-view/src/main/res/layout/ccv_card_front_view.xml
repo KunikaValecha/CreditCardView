@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvFront"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="22dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTopView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1F1F1F"
+        android:padding="15dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/outline"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:background="@drawable/ccv_bg_rounded_corner_white"
+            app:layout_constraintStart_toStartOf="@id/etCardNumber"
+            app:layout_constraintTop_toTopOf="@id/etCardNumber" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/front_tvBankName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingHorizontal="4dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/ivCardTypeFront"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textAllCaps="true"
+            tools:text="HDFC Bank" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCardTypeFront"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_max="40dp"
+            tools:src="@drawable/ic_mastercard" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHeaderCardNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:paddingHorizontal="4dp"
+            android:text="Card Number"
+            android:textColor="#C4C4C4"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/front_tvBankName" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etCardNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@null"
+            android:elevation="4dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="start|center_vertical"
+            android:hint="XXXX XXXX XXXX XXXX"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:maxLength="19"
+            android:maxLines="1"
+            android:minHeight="38dp"
+            android:nextFocusDown="@id/etName"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="#656565"
+            android:textCursorDrawable="@drawable/ccv_cursor_blue"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:translationZ="4dp"
+            app:layout_constraintHeight_min="38dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHeaderCardNumber"
+            app:lineHeight="31sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHeaderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:paddingHorizontal="4dp"
+            android:text="Name on card"
+            android:textColor="#C4C4C4"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etCardNumber" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="150dp"
+            android:background="@null"
+            android:gravity="start|center_vertical"
+            android:hint="NAME SURNAME"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:nextFocusRight="@id/etExpiry"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="#656565"
+            android:textCursorDrawable="@drawable/ccv_cursor_blue"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/etExpiry"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHeaderName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHeaderExpDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:paddingHorizontal="4dp"
+            android:text="Expiry Date"
+            android:textColor="#C4C4C4"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etCardNumber" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etExpiry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@null"
+            android:gravity="start|center_vertical"
+            android:hint="MM/YY"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="#656565"
+            android:textCursorDrawable="@drawable/ccv_cursor_blue"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHeaderExpDate"
+            app:textAllCaps="true" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,73 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 32
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    sourceSets {
+        main {
+            res {
+                srcDirs 'src/main/res'
+            }
+        }
+    }
+}
+
+dependencies {
+
+    //Core-KTX
+    implementation 'androidx.core:core-ktx:1.8.0'
+
+    //AppCompat
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+
+    //Material
+    implementation 'com.google.android.material:material:1.6.1'
+
+    //Constraint Layout
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    //Flip View - https://github.com/wajahatkarim3/EasyFlipView
+    implementation 'com.wajahatkarim:EasyFlipView:3.0.3'
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = 'com.github.KunikaValecha'
+                artifactId = 'credit-card-view'
+                version = '1.0'
+            }
+        }
+    }
+}

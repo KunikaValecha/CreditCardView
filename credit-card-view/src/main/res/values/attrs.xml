@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CreditCardView">
+
+        <!--- Card Background Color Attrs -->
+        <attr name="card_frontGradientStart" format="color" />
+        <attr name="card_frontGradientEnd" format="color" />
+        <attr name="card_backGradientStart" format="color" />
+        <attr name="card_backGradientEnd" format="color" />
+        <attr name="card_backStripColor" format="color" />
+        <attr name="card_backStrip2Color" format="color" />
+
+        <!-- Card CVV Attrs -->
+        <attr name="card_cvvBackgroundColor" format="color" />
+        <attr name="card_cvvHintColor" format="color" />
+        <attr name="card_cvvTextColor" format="color" />
+
+        <!--- Card Number Attrs -->
+        <attr name="card_cardNumberTextColor" format="color" />
+        <attr name="card_cardNumberHintColor" format="color" />
+        <attr name="card_minCardNumberLength" format="integer" />
+        <attr name="card_maxCardNumberLength" format="integer" />
+
+        <!--- Card Name Attrs -->
+        <attr name="card_cardNameHeaderColor" format="color" />
+        <attr name="card_cardNameTextColor" format="color" />
+        <attr name="card_cardNameHintColor" format="color" />
+
+        <!--- Card Expiry Attrs -->
+        <attr name="card_cardExpiryHeaderColor" format="color" />
+        <attr name="card_cardExpiryTextColor" format="color" />
+        <attr name="card_cardExpiryHintColor" format="color" />
+
+        <attr name="card_autoFocusCardNumber" format="boolean" />
+        <attr name="card_outline_error_color" format="color" />
+        <attr name="card_outline_base_color" format="color" />
+
+        <attr name="card_separator" format="string" />
+
+        <attr name="card_isFrontSideEditable" format="boolean" />
+        <attr name="card_isBackSideEditable" format="boolean" />
+
+    </declare-styleable>
+</resources>
