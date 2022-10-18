@@ -8,6 +8,11 @@
   <a href="https://jitpack.io/#KunikaValecha/CreditCardView"><img alt="API" src="https://jitpack.io/v/KunikaValecha/CreditCardView.svg?style=flat"/></a>
 </p>
 
+<p align="center">
+<img src="https://github.com/KunikaValecha/CreditCardView/blob/master/assets/credit-card-view.jpg" width="273"/>
+<img src="https://github.com/KunikaValecha/CreditCardView/blob/master/assets/credit-card-view.gif" width="280"/>
+</p>
+
 #### Inspiration
 This library is inspired by the [Paweł Szymankiewicz's](https://dribbble.com/pawelszymankiewicz) work on [dribble](https://dribbble.com/shots/6440077-Add-a-New-Credit-Card-alternate-flow).
 
@@ -16,7 +21,7 @@ This library is inspired by the [Paweł Szymankiewicz's](https://dribbble.com/pa
 + [Basic usage](#basic-usage)
 + [Customisation](#customisation)
 + [Functions available](#functions-available)
-+ [Examples](#getting-started)
++ [License](#license)
 
 ## Getting started
 In your project's build.gradle
